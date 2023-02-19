@@ -1,8 +1,16 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(192, 181, 181);
 }
 
 a {
-  color: #00b7ff;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+#start-quick{
+  font-weight: bold;
 }

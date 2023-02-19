@@ -1,0 +1,15 @@
+<h2 class="d-flex justify-content-center bg-primary border border-dark">My list of movies</h2>
+
+<ol class="list-group list-group-numbered">
+    {{#each result}}
+    <li class="list-group-item" ><a href="/movie/{{id}}" >{{title}}</a></li>
+    {{/each}}
+</ol>
+
+<div class="d-flex justify-content-end mt-5">
+    <a href="/" class="btn btn-primary">Home</a>
+</div>
+
+
+
+ 

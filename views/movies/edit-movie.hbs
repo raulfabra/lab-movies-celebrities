@@ -1,0 +1,40 @@
+<h2 class="d-flex justify-content-center bg-primary border border-dark">Edit the movie: {{result.title}}</h2>
+
+<form action="/movie/{{result._id}}/edit" method="post">
+<div>
+  <label class="form-label"> Title:
+    <input type="text" name="title" value="{{result.title}}" class="form-control"/>
+  </label>
+
+</div>
+<div>
+  <label class="form-label"> Genre:
+    <input type="text" name="genre" value="{{result.genre}}"class="form-control" />
+  </label>
+
+</div>
+<div>
+  <label class="form-label"> Plot:
+    <textarea name="plot" cols="30" rows="4" class="form-control">{{result.plot}}</textarea>
+  </label>
+
+</div>
+<div>
+  <label class="form-label"> Cast:
+    <select name="cast" class="form-select" multiple>
+            {{#each data}}
+            <option value="{{_id}}">{{name}}</option>
+            {{/each}}
+    </select>
+  </label>
+
+</div>
+<div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Save changed</button>
+  </div>
+</form>
+
+
+<div class="d-flex justify-content-end">
+    <a href="/" class="btn btn-primary">Home</a>
+</div>

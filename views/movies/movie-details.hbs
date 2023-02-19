@@ -1,0 +1,28 @@
+<h2 class="d-flex justify-content-center bg-primary border border-dark">Movie Detail</h2>
+<h3 class="d-flex justify-content-center">{{result2.title}}</h3>
+<p><strong>GENRE: </strong>{{result2.genre}}</p>
+<p><strong>PLOT: </strong>{{result2.plot}}</p>
+<ul  class="list-unstyled">
+    <h4 class= "d-flex justify-content-center">Celebrity</h4>
+    {{#each result2.cast}}
+    <li class="list-group-item list-group-item-dark" >{{name}}</li>
+    <li class="list-group-item list-group-item-dark" >{{occupation}}</li>
+    <li class="list-group-item list-group-item-dark" >{{catchPhrase}}</li>
+    {{/each}}
+</ul>
+<div>
+    <form action="/movie/{{result2.id}}/delete" method="post">
+        <button type="submit" class="btn btn-primary mb-3">Delete</button>
+    </form>
+</div>
+<div>
+ <a href="/movie/{{result2.id}}/edit" class="btn btn-warning">Edit movie</a>
+</div>
+
+
+
+
+<div class="d-flex justify-content-end">
+    <a href="/" class="btn btn-primary">Home</a>
+</div>
+
